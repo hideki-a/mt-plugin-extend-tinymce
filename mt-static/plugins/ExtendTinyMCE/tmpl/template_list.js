@@ -1,4 +1,4 @@
-var tmpl_base_url = '/mt-static/plugins/ExtendTinyMCE/tmpl/',
+var tmpl_base_url = parent.window.StaticURI + 'plugins/ExtendTinyMCE/tmpl/',
     tinyMCETemplateList = new Array(
     // [Name, URL],
     // [Name, URL]
