@@ -43,7 +43,7 @@ var theme_advanced_blockformats = 'p,h2,h3,h4,h5';
 // （テンプレートの設定内容は表示されません。）
 var template_external_list_url = 'tmpl/template_list.js?' + Math.ceil(Math.random() * 1000000000);
 
-var convert_urls = true;
+var convert_urls = true;    // 相対パスを利用する場合はfalseに変更します。
 var remove_script_host = true;
 var relative_urls = false;
 var element_format = 'html';
