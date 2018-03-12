@@ -1,6 +1,13 @@
 <mt:setvarblock name="js_include" append="1">
+<mt:if name="mt_version_id" like="^7">
+<script type="text/javascript" src="<mt:var name="static_uri">plugins/ExtendTinyMCE/extension_mt7.js"></script>
+<mt:else>
 <script type="text/javascript" src="<mt:var name="static_uri">plugins/ExtendTinyMCE/extension.js"></script>
+</mt:if>
 </mt:setvarblock>
 <mt:setvarblock name="html_head" append="1">
+<mt:if name="mt_version_id" like="^7">
+<mt:else>
 <link rel="stylesheet" href="<mt:var name="static_uri">plugins/ExtendTinyMCE/skin/ui.css" type="text/css" />
+</mt:if>
 </mt:setvarblock>
