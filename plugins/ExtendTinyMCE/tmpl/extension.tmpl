@@ -7,6 +7,14 @@
 </mt:setvarblock>
 <mt:setvarblock name="html_head" append="1">
 <mt:if name="mt_version_id" like="^7">
+<style>
+.mce-ico.mce-i-template {
+ background: transparent url('/mt-static/images/icons/ic_template.svg') no-repeat center/16px;
+ overflow: hidden;
+ text-indent: 100%;
+ white-space: nowrap;
+}
+</style>
 <mt:else>
 <link rel="stylesheet" href="<mt:var name="static_uri">plugins/ExtendTinyMCE/skin/ui.css" type="text/css" />
 </mt:if>
