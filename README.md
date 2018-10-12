@@ -2,8 +2,13 @@
 
 Load the table plugin, template plugin and add buttons to TinyMCE that is default rich text editor of Movable Type 5.2 or later.
 
-![Screenshot](https://raw.github.com/hideki-a/mt-plugin-extend-tinymce/master/artwork/screenshot.png)
+## Display Sample
 
+### MT5+
+![Screenshot(MT5+)](https://raw.github.com/hideki-a/mt-plugin-extend-tinymce/master/artwork/screenshot.png)
+
+### MT7
+![Screenshot(MT7)](https://raw.github.com/hideki-a/mt-plugin-extend-tinymce/master/artwork/screenshot_mt7.png)
 
 ## Requirements
 
@@ -36,4 +41,4 @@ The following copyright notice applies to all the files provided in this
 distribution, including binary files, unless explicitly noted otherwise.
 
 * Copyright 2012 Six Apart, Ltd.
-* Copyright 2015 Hideki Abe <http://www.anothersky.pw>
+* Copyright 2018 Hideki Abe <http://www.anothersky.pw>
