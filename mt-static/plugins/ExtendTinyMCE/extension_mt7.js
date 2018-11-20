@@ -17,6 +17,7 @@ if (config.plugin_mt_wysiwyg_buttons1.indexOf('template') > -1) {
 
 // ボタン - 2段目
 var buttons2 = config.plugin_mt_wysiwyg_buttons2.replace('|,mt_fullscreen', 'fontsizeselect,|,mt_fullscreen');
+buttons2 = buttons2.replace('indent', 'alignleft,aligncenter,alignright,indent');
 // var buttons2 = config.plugin_mt_wysiwyg_buttons2.replace('|,mt_fullscreen', 'styleselect,fontsizeselect,|,mt_fullscreen');
 
 // スタイルプルダウンの定義
