@@ -43,7 +43,7 @@ var fontsize_formats = '12px 14px 16px 18px 20px';
 // （テンプレートの設定内容は表示されません。）
 var tmpl_base_url = parent.window.StaticURI + 'plugins/ExtendTinyMCE/tmpl/';
 var tmpl_list = new Array(
-        { title: "Image Left", url: tmpl_base_url + "image_left.html" },
+        { title: "Image Left", url: tmpl_base_url + "image_left.html" }
     );
 
 if (config.templates) {
