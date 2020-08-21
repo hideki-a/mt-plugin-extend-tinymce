@@ -2,6 +2,7 @@
 
 var config   = MT.Editor.TinyMCE.config;
 var base_url = StaticURI + 'plugins/ExtendTinyMCE/';
+var mt_version = MT.Editor.TinyMCE.config.cache_suffix.replace(/^v\=(\d\.\d+)\.\d+$/,'$1');
 
 // TinyMCEで利用するプラグイン
 // http://www.tinymce.com/wiki.php/Configuration3x:plugins
@@ -48,6 +49,12 @@ var remove_script_host = true;
 var relative_urls = false;
 var element_format = 'html';
 var schema = "html5";
+
+if (mt_version >= 6.7) {
+    buttons1 = buttons1.replace(/,/g, ' ');
+    buttons2 = buttons2.replace(/,/g, ' ');
+    buttons3 = buttons3.replace(/,/g, ' ');
+}
 
 $.extend(config, {
     plugins: config.plugins + add_plugins,
