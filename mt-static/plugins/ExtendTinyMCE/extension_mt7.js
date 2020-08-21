@@ -16,8 +16,15 @@ if (config.plugin_mt_wysiwyg_buttons1.indexOf('template') > -1) {
 }
 
 // ボタン - 2段目
-var buttons2 = config.plugin_mt_wysiwyg_buttons2.replace('|,mt_fullscreen', 'fontsizeselect,|,mt_fullscreen');
-buttons2 = buttons2.replace('indent', 'alignleft,aligncenter,alignright,indent');
+var buttons2;
+if (extendTinyMCE.isTinyMCE5) {
+    // MT7 r.4609以上（TinyMCE 5.x）
+    buttons2 = config.plugin_mt_wysiwyg_buttons2.replace('| mt_fullscreen', 'fontsizeselect | mt_fullscreen');
+} else {
+    // MT7 r.4609より古い場合（TinyMCE 4.x）
+    buttons2 = config.plugin_mt_wysiwyg_buttons2.replace('|,mt_fullscreen', 'fontsizeselect,|,mt_fullscreen');
+    buttons2 = buttons2.replace('indent', 'alignleft,aligncenter,alignright,indent');
+}
 // var buttons2 = config.plugin_mt_wysiwyg_buttons2.replace('|,mt_fullscreen', 'styleselect,fontsizeselect,|,mt_fullscreen');
 
 // スタイルプルダウンの定義
@@ -55,6 +62,12 @@ var remove_script_host = true;
 var relative_urls = false;
 var element_format = 'html';
 var schema = "html5";
+
+if (extendTinyMCE.isTinyMCE5) {
+    buttons1 = buttons1.replace(/,\|,table$/, '');
+    buttons1 = buttons1.replace(/,/g, ' ');
+    buttons2 = buttons2.replace(/,/g, ' ');
+}
 
 $.extend(config, {
     plugins: config.plugins + add_plugins,

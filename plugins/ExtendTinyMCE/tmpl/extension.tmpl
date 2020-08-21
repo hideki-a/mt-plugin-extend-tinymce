@@ -1,10 +1,11 @@
-<mt:var name="mt_version_id" regex_replace="/^(\d+)\.\d+\.\d+$/","$1" setvar="mt_major_version_id" />
-<mt:var name="mt_version_id" regex_replace="/^\d+\.(\d+)\.\d+$/","$1" setvar="mt_minor_version_id" />
+<mt:var name="mt_version_id" regex_replace="/^(\d+)\.\d+(\.\d+)?$/","$1" setvar="mt_major_version_id" />
+<mt:var name="mt_version_id" regex_replace="/^\d+\.(\d+)(\.\d+)?$/","$1" setvar="mt_minor_version_id" />
 
 <mt:setvarblock name="js_include" append="1">
 <script>
 window.extendTinyMCE = extendTinyMCE = {};
 <mt:if name="mt_major_version_id" ge="7">
+extendTinyMCE.isTinyMCE5 = <mt:if name="mt_minor_version_id" ge="4">true<mt:else>false</mt:if>;
 <mt:else>
 extendTinyMCE.isTinyMCE5 = <mt:if name="mt_minor_version_id" ge="7">true<mt:else>false</mt:if>;
 </mt:if>
