@@ -53,6 +53,7 @@ if (extendTinyMCE.isTinyMCE5) {
     buttons1 = buttons1.replace(/,/g, ' ');
     buttons2 = buttons2.replace(/,/g, ' ');
     buttons3 = buttons3.replace(/,/g, ' ');
+    font_sizes = font_sizes.replace(/,/g, ' ');
 }
 
 $.extend(config, {
@@ -64,6 +65,7 @@ $.extend(config, {
     indent_after: indent_after,
     style_formats: styles,
     theme_advanced_font_sizes: font_sizes,
+    fontsize_formats: font_sizes,
     theme_advanced_blockformats: theme_advanced_blockformats,
     template_external_list_url: base_url + template_external_list_url,
     convert_urls: convert_urls,
