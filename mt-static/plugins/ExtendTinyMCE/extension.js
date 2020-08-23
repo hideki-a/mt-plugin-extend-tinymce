@@ -5,7 +5,7 @@ var base_url = StaticURI + 'plugins/ExtendTinyMCE/';
 
 // TinyMCEで利用するプラグイン
 // http://www.tinymce.com/wiki.php/Configuration3x:plugins
-var add_plugins = ',table,template';
+var add_plugins = ',template,';
 
 // ボタン - 1段目
 // http://www.tinymce.com/wiki.php/Configuration3x:theme_advanced_buttons_1_n
@@ -15,7 +15,7 @@ var buttons1 = (config.plugin_mt_wysiwyg_buttons1 || '') + ',|,template,|,attrib
 var buttons2 = 'undo,redo,|,forecolor,backcolor,removeformat,|,justifyleft,justifycenter,justifyright,indent,outdent,|,styleselect,formatselect,fontsizeselect,|,mt_fullscreen';
 
 // ボタン - 3段目
-var buttons3 = (config.plugin_mt_wysiwyg_buttons3 || '') + ',tablecontrols,|,visualaid';
+var buttons3 = (config.plugin_mt_wysiwyg_buttons3 || '') + ',|,visualaid';
 
 var indent_before = 'p,h1,h2,h3,h4,h5,h6,blockquote,div,title,style,pre,script,td,ul,ol,dl,dt,dd,area,table,thead,tfoot,tbody,tr,iframe,section,article,aside,figure,option,optgroup,datalist';
 var indent_after = 'p,h1,h2,h3,h4,h5,h6,blockquote,div,title,style,pre,script,td,ul,ol,dl,dt,dd,area,table,thead,tfoot,tbody,tr,iframe,section,article,aside,figure,option,optgroup,datalist';
