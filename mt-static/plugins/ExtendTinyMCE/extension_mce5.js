@@ -10,22 +10,13 @@ var add_plugins = ',table,template';
 // https://www.tiny.cloud/docs/advanced/editor-control-identifiers/#toolbarcontrols
 var buttons1;
 if (config.plugin_mt_wysiwyg_buttons1.indexOf('template') > -1) {
-    buttons1 = config.plugin_mt_wysiwyg_buttons1 + ',|,table';
+    buttons1 = config.plugin_mt_wysiwyg_buttons1;
 } else {
-    buttons1 = config.plugin_mt_wysiwyg_buttons1 + ',|,template,|,table';
+    buttons1 = config.plugin_mt_wysiwyg_buttons1 + ' | template';
 }
 
 // ボタン - 2段目
-var buttons2;
-if (extendTinyMCE.isTinyMCE5) {
-    // MT7 r.4609以上（TinyMCE 5.x）
-    buttons2 = config.plugin_mt_wysiwyg_buttons2.replace('| mt_fullscreen', 'fontsizeselect | mt_fullscreen');
-} else {
-    // MT7 r.4609より古い場合（TinyMCE 4.x）
-    buttons2 = config.plugin_mt_wysiwyg_buttons2.replace('|,mt_fullscreen', 'fontsizeselect,|,mt_fullscreen');
-    buttons2 = buttons2.replace('indent', 'alignleft,aligncenter,alignright,indent');
-}
-// var buttons2 = config.plugin_mt_wysiwyg_buttons2.replace('|,mt_fullscreen', 'styleselect,fontsizeselect,|,mt_fullscreen');
+var buttons2 = config.plugin_mt_wysiwyg_buttons2.replace('| mt_fullscreen', 'fontsizeselect | mt_fullscreen');
 
 // スタイルプルダウンの定義
 // 任意のstyle属性値やclass属性値を付与した要素が挿入可能になる
@@ -50,7 +41,7 @@ var fontsize_formats = '12px 14px 16px 18px 20px';
 // （テンプレートの設定内容は表示されません。）
 var tmpl_base_url = parent.window.StaticURI + 'plugins/ExtendTinyMCE/tmpl/';
 var tmpl_list = new Array(
-        { title: "Image Left", url: tmpl_base_url + "image_left.html" }
+        { title: "Image Left", description: "画像左パターンです。", url: tmpl_base_url + "image_left.html" }
     );
 
 if (config.templates) {
@@ -62,12 +53,6 @@ var remove_script_host = true;
 var relative_urls = false;
 var element_format = 'html';
 var schema = "html5";
-
-if (extendTinyMCE.isTinyMCE5) {
-    buttons1 = buttons1.replace(/,\|,table$/, '');
-    buttons1 = buttons1.replace(/,/g, ' ');
-    buttons2 = buttons2.replace(/,/g, ' ');
-}
 
 $.extend(config, {
     plugins: config.plugins + add_plugins,
