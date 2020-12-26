@@ -1,19 +1,15 @@
-# Extend TinyMCE
+# Extend TinyMCE (for TinyMCE 5)
 
-Load the table plugin, template plugin and add buttons to TinyMCE that is default rich text editor of Movable Type 5.2 or later.
+Load the template plugin and add buttons to TinyMCE 5 that is default rich text editor of Movable Type.
 
 ## Display Sample
 
-### MT5+
-![Screenshot(MT5+)](https://raw.github.com/hideki-a/mt-plugin-extend-tinymce/master/artwork/screenshot.png)
-
-### MT7
-![Screenshot(MT7)](https://raw.github.com/hideki-a/mt-plugin-extend-tinymce/master/artwork/screenshot_mt7.png)
+![Screenshot](https://raw.github.com/hideki-a/mt-plugin-extend-tinymce/master/artwork/screenshot.png)
 
 ## Requirements
 
-* Movable Type 5.2 or later
-
+* Movable Type 6.7 or later
+* Movable Type 7 r.4703 or later
 
 ## Installation
 
@@ -33,12 +29,11 @@ Should look like this when installed:
 ## License
 
 This library is free software released under the MIT.
- 
- 
+
 ## Copyright
 
 The following copyright notice applies to all the files provided in this
 distribution, including binary files, unless explicitly noted otherwise.
 
 * Copyright 2012 Six Apart, Ltd.
-* Copyright 2018 Hideki Abe <http://www.anothersky.pw>
+* Copyright 2018 Hideki Abe <https://www.anothersky.pw>
